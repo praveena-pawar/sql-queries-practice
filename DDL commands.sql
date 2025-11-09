@@ -83,6 +83,13 @@ ON r.s_id = s.s_id;
 
 
 
+-- List supplier names who have supplied more than 100 units of any part.
+SELECT s_name FROM supplier s
+INNER JOIN supplies p
+ON s.s_id = p.s_id
+WHERE qty > 100;
+
+
 
 
 
