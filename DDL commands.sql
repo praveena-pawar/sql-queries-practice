@@ -98,8 +98,6 @@ INNER JOIN supplier a
 ON a.s_id = s.s_id;
 
 
-
-
 -- Show all suppliers who supplied the part “Bolt”.
 select s_name from supplier s
 inner join supplies a
@@ -108,6 +106,11 @@ inner join part p
 on p.p_id = a.p_id
 where p_name = "bolt";
 
+
+-- List all parts that have been supplied by any supplier.
+SELECT p_name FROM part p
+INNER JOIN supplies s
+ON p.p_id = s.p_id;
 
 
 
