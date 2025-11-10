@@ -100,6 +100,13 @@ ON a.s_id = s.s_id;
 
 
 
+-- Show all suppliers who supplied the part “Bolt”.
+select s_name from supplier s
+inner join supplies a
+on s.s_id = a.s_id
+inner join part p
+on p.p_id = a.p_id
+where p_name = "bolt";
 
 
 
