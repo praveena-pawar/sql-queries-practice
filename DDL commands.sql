@@ -114,3 +114,9 @@ ON p.p_id = s.p_id;
 
 
 
+-- Show supplier names and the total quantity they have supplied (sum of qty).
+SELECT s_name, SUM(qty) as totalquantity FROM supplier s
+LEFT JOIN supplies a
+ON s.s_id = a.s_id
+GROUP BY s_name ;
+
