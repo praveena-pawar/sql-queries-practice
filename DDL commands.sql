@@ -90,6 +90,13 @@ ON s.s_id = p.s_id
 WHERE qty > 100;
 
 
+-- Display supplier name, part name, quantity, and date supplied.
+SELECT s_name, p_name, qty, date_supplied FROM part p
+INNER JOIN supplies s
+ON p.p_id = s.p_id
+INNER JOIN supplier a
+ON a.s_id = s.s_id;
+
 
 
 
