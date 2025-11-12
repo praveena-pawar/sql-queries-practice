@@ -142,8 +142,6 @@ ON s.s_id = a.s_id
 WHERE qty > 100;
 
 
-
-
 -- Show each part name and how many suppliers have supplied it.
 SELECT p_name, COUNT(s_name) FROM part p
 LEFT JOIN supplies s
@@ -153,6 +151,15 @@ ON s.s_id = a.s_id
 GROUP BY p_name ;
 
 
+
+
+
+-- Find the part with the highest price that has been supplied.
+SELECT p_name, price FROM part p
+INNER JOIN supplies s
+ON p.p_id = s.p_id
+ORDER BY price DESC
+LIMIT 1;
 
 
 
