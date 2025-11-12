@@ -120,3 +120,11 @@ LEFT JOIN supplies a
 ON s.s_id = a.s_id
 GROUP BY s_name ;
 
+
+
+-- Display all suppliers along with the parts they supplied (including suppliers who haven’t supplied anything).
+SELECT  s_name, p_name FROM supplier s
+LEFT JOIN supplies a
+on a.s_id = s.s_id
+LEFT JOIN part p
+ON p.p_id = a.p_id;
