@@ -144,6 +144,13 @@ WHERE qty > 100;
 
 
 
+-- Show each part name and how many suppliers have supplied it.
+SELECT p_name, COUNT(s_name) FROM part p
+LEFT JOIN supplies s
+ON p.p_id = s.p_id
+LEFT JOIN supplier a
+ON s.s_id = a.s_id
+GROUP BY p_name ;
 
 
 
@@ -156,8 +163,9 @@ WHERE qty > 100;
 
 
 
--- Aggregate & Conditional Queries
--- Find supplier names who have supplied more than 100 units of any part.
+
+
+
 
 -- Show each part name and how many suppliers have supplied it.
 
