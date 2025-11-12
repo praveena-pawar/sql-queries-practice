@@ -128,3 +128,41 @@ LEFT JOIN supplies a
 on a.s_id = s.s_id
 LEFT JOIN part p
 ON p.p_id = a.p_id;
+
+
+
+
+
+-- 🔹 Aggregate & Conditional Queries
+
+-- Find supplier names who have supplied more than 100 units of any part.
+SELECT  DISTINCT s_name FROM supplier s
+INNER JOIN supplies a
+ON s.s_id = a.s_id 
+WHERE qty > 100;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Aggregate & Conditional Queries
+-- Find supplier names who have supplied more than 100 units of any part.
+
+-- Show each part name and how many suppliers have supplied it.
+
+-- Find the part with the highest price that has been supplied.
+
+-- List the parts that have been supplied more than 2 times.
+
+-- Show supplier names who have supplied parts costing more than ₹100.
