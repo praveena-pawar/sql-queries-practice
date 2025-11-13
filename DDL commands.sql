@@ -153,13 +153,26 @@ GROUP BY p_name ;
 
 
 
-
 -- Find the part with the highest price that has been supplied.
 SELECT p_name, price FROM part p
 INNER JOIN supplies s
 ON p.p_id = s.p_id
 ORDER BY price DESC
 LIMIT 1;
+
+
+
+
+
+-- Show supplier names who have supplied parts costing more than ₹100.
+SELECT DISTINCT s.s_name
+FROM supplier s
+INNER JOIN supplies sp ON s.s_id = sp.s_id
+INNER JOIN part p ON sp.p_id = p.p_id
+WHERE p.price > 100;
+
+
+
 
 
 
