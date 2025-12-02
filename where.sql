@@ -9,3 +9,16 @@ WHERE department = 'it' and salary > 60000;
 -- Display employees whose age is between 25 and 30.
 SELECT * FROM employees 
 WHERE age  BETWEEN 25 and 30;	
+
+
+-- Display employees who work in Bangalore and have salary less than 50,000.
+SELECT * FROM employees 
+WHERE city = 'bangalore' and salary < 50000;
+
+-- Display employees whose department is not 'Sales'.
+SELECT * FROM employees 
+WHERE department != 'sales';
+
+-- Display employees whose experience is 5 years or more.
+SELECT * FROM employees 
+WHERE experience >= 5;
