@@ -22,3 +22,14 @@ WHERE department != 'sales';
 -- Display employees whose experience is 5 years or more.
 SELECT * FROM employees 
 WHERE experience >= 5;
+
+
+
+-- Display employees with salary between 40,000 and 55,000.
+SELECT * FROM employees 
+WHERE salary BETWEEN 40000 and 55000;
+
+
+-- Display employees not from the cities Bangalore, Mysore, or Chennai.
+SELECT * FROM employees 
+WHERE city NOT IN ('Bangalore','Mysore','Chennai');
