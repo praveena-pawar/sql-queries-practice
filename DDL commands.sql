@@ -71,7 +71,7 @@ INSERT INTO supplies (s_id, p_id, qty, date_supplied) VALUES
 
 SELECT * FROM supplies;
 
-      
+
    --    SQL QUERY ON JOINS
       
 -- Show all parts that have been supplied by any supplier.
